@@ -19,7 +19,7 @@ def generate_launch_description():
         name="odometry_node",
         output="screen",
         parameters=[
-            {'publish_tf': False}
+            {'publish_tf': True}
         ]         
     )
 
@@ -100,7 +100,7 @@ def generate_launch_description():
         package="robot_state_publisher",
         executable="robot_state_publisher",
         parameters=[{"robot_description": robot_description,
-                     'publish_tf': False
+                     'publish_tf': True
                      }]
     )
 

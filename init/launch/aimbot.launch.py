@@ -30,8 +30,16 @@ def generate_launch_description():
         output="screen"
     )
 
+    module_server = Node(
+        package="yrm100",
+        executable="module_server",
+        output="screen"
+    )
+
+   
 
     return LaunchDescription([
         imu_node,
-        diff_motion
+        diff_motion,
+        module_server
     ])
