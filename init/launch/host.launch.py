@@ -12,6 +12,8 @@ def generate_launch_description():
 
     robot_description = ParameterValue(Command(['xacro ', str(urdf_path)]), value_type=str)
 
+   # add diff calc since it publishes odom which is filtered , but first modify diff calc not to publish duty
+   
     # Wheel Odometry Node
     wheel_odom = Node(
         package="bringup",
